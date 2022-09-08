@@ -43,7 +43,7 @@ class Stars extends Component {
   }
 
   onClick (e) {
-    this.setState({recorded:true});
+    this.setState({recorded:true})
     this.getRating(e.target, 1);
 
     console.log('state',this.state)
@@ -61,8 +61,8 @@ class Stars extends Component {
       <Fragment>
         {this.state.recorded ?
           <Fragment>
-            <p>Thank you for sharing your rating {this.state.rating > 0 ? `of ${this.state.rating} star${this.state.rating > 1 ? 's' : ''}` : ''}{this.state.rating < 4 ? '. Let us know how we can improve!' : '!'}</p>
-            <AvgStars />
+            <p>Thank you for sharing your rating {this.state.rating > 0 ? `of ${this.state.rating} star${this.state.rating > 1 ? 's' : ''}` : ''}{this.state.rating < 4 ? '. Let us know how we can improve!' : '! We are glad you like it.'}</p>
+            <AvgStars setFullStars />
           </Fragment>
           :<Fragment>
             <i>Would you like to rate your experience with Star Rating?</i>
